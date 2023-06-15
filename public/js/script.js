@@ -1,6 +1,6 @@
 // To fetch number of public repositories
 const username = "sevro49";
-const token = "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";
+const token = "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";
 const projectsElement = document.querySelector(
     ".profile div:nth-child(2) .number"
 );
