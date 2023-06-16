@@ -1,19 +1,26 @@
-// To fetch number of public repositories
 const username = "sevro49";
-const token = "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";
-const projectsElement = document.querySelector(
-    ".profile div:nth-child(2) .number"
-);
+let token = "";
+const filePath = '../../access_token.txt';
+const projectsElement = document.querySelector(".profile div:nth-child(2) .number-of-repos");
 
-fetch(`https://api.github.com/users/${username}`, {
-    headers: {
-        Authorization: `Bearer ${token}`,
-    },
-})
-    .then((response) => response.json())
-    .then((data) => {
-        const numRepos = data.public_repos;
-        // Display the number of repositories on your website
-        projectsElement.innerText = `${numRepos}`;
+fetch(filePath)
+    .then(response => response.text())
+    .then(data => {
+        token = data;
+
+        fetch(`https://api.github.com/users/${username}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                const numRepos = data.public_repos;
+                // Display the number of repositories on your website
+                projectsElement.innerText = `${numRepos}`;
+            })
+            .catch(error => console.error(error));
     })
-    .catch((error) => console.error(error));
+    .catch(error => {
+        console.error('File could not be read', error);
+    });
