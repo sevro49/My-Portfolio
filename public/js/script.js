@@ -1,9 +1,16 @@
 const username = "sevro49";
 let token = "";
 const filePath = '../../access_token.txt';
-const projectsElement = document.querySelector(".profile div:nth-child(2) .number-of-repos");
 
-fetch(filePath)
+// Check if running on GitHub Pages or locally
+if (window.location.hostname === "sevro49.github.io") {
+  // Running on GitHub Pages, use environment variable
+  token = process.env.ACCESS_TOKEN;
+} else {
+  // Running locally, use fallback token value
+  const projectsElement = document.querySelector(".profile div:nth-child(2) .number-of-repos");
+
+  fetch(filePath)
     .then(response => response.text())
     .then(data => {
         token = data;
@@ -24,3 +31,8 @@ fetch(filePath)
     .catch(error => {
         console.error('File could not be read', error);
     });
+}
+
+
+
+
