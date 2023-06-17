@@ -13,18 +13,13 @@ if (window.location.hostname === "sevro49.github.io") {
   fetch(filePath)
     .then(response => response.text())
     .then(data => {
-        token = data;
-
-        fetch(`https://api.github.com/users/${username}`, {
-            headers: {
-                Authorization: `Bearer ${token}`,
-            },
-        })
+        fetch(`https://api.github.com/users/${username}`, {})
             .then(response => response.json())
             .then(data => {
                 const numRepos = data.public_repos;
                 // Display the number of repositories on your website
                 projectsElement.innerText = `${numRepos}`;
+                console.log(numRepos);
             })
             .catch(error => console.error(error));
     })
