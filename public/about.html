@@ -1,13 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>My Portfolio</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Prompt&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Emre Güler</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header__inner">
+            <div class="container">
+                <nav class="main-nav">
+                    <img src="img/logo.png" alt="" class="main-nav__logo" />
+                    <ul class="main-nav__items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- section a -->
+        <section id="about-a" class="text-center py-2">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="border-bottom"></div>
+                <div class="info">
+                    <img
+                        src="img/eg-pp2.jpg"
+                        alt="emre-guler"
+                        class="info__image"
+                    />
+                    <div class="info__bio">
+                        <h3>Who Am I?</h3>
+                        <div class="info__bio__content">
+                            <p>
+                                My name is Emre Güler, and I am 22 years old. I
+                                am a fourth-year student studying Computer
+                                Engineering at Istanbul Medeniyet University. I
+                                have a passion for listening to metal music,
+                                reading Orwell's works, and watching Nolan
+                                films.
+                                <br /><br />
+                                After graduation, my short-term career goal is
+                                to start my journey in Front-End web
+                                development. In the long run, I aspire to become
+                                a Full-stack developer. Seeing my code come to
+                                life in front of me brings me immense joy and
+                                motivation. As a result, I have gained
+                                experience in game development, mobile
+                                programming, and web development, ultimately
+                                deciding to focus on web development. I believe
+                                that Front-End web development offers a unique
+                                opportunity to blend creativity with technical
+                                expertise. I strongly believe that I will excel
+                                in this field as I possess the necessary skills
+                                and abilities to succeed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section b -->
+        <section id="about-b" class="bg-dark py-2">
+            <div class="container">
+                <h2 class="section-title">What I Know...</h2>
+                <div class="border-bottom"></div>
+                <div id="progress-bars">
+                    <h4>HTML5</h4>
+                    <div class="progress">
+                        <div style="width: 90%"></div>
+                    </div>
+                    <h4>CSS</h4>
+                    <div class="progress">
+                        <div style="width: 80%"></div>
+                    </div>
+                    <h4>JavaScript</h4>
+                    <div class="progress">
+                        <div style="width: 25%"></div>
+                    </div>
+                    <h4>Team Spirit</h4>
+                    <div class="progress">
+                        <div style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="main-footer">
+            <div class="footer-content container">
+                <p>Copyright &copy; 2025. All Rights Reserved.</p>
+
+                <div class="social">
+                    <a href="https://github.com/sevro49" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/e.glrr/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/e_glrr" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/sevro49/"
+                        target="_blank"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="mailto:dr.emreguler@hotmail.com.tr"
+                        target="_blank"
+                    >
+                        <i class="mail fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="js/script.js"></script>
+    </body>
 </html>
