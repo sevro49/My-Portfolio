@@ -1,65 +1,68 @@
-.items{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    box-shadow: rgba(149, 154, 145, .2) 0px 8px 24px;
+.items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	box-shadow: rgba(149, 154, 145, 0.2) 0px 8px 24px;
 
-    .item{
-        position: relative;
-        background-color: $light-color;
-        overflow: hidden;
+	.item {
+		position: relative;
+		background-color: $light-color;
+		overflow: hidden;
 
-        &::after{
-            content: '';
-            position: absolute;
-            display: block;
-            background-color: $primary-color;
-            opacity: .8;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: translateX(-120%) translateY(-120%) rotate(45deg);
-            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background-color: $primary-color;
+			opacity: 0.8;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform: translateX(-120%) translateY(-120%)
+				rotate(45deg);
+			transition: transform 1s
+				cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
 
-        &:hover::after{
-            transform: scale(2) translateX(-60%)  translateY(-60%) rotate(45deg);
-        }
+		&:hover::after {
+			transform: scale(2) translateX(-60%) translateY(-60%)
+				rotate(45deg);
+		}
 
-        &__link{
-            position: absolute;
-            top: .5rem;
-            right: .5rem;
-            background-color: $primary-color;
-            border-radius: 3px;
-            padding: .6rem;
-            transition: all .2s ease-in;
+		&__link {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			background-color: $primary-color;
+			border-radius: 3px;
+			padding: 0.6rem;
+			transition: all 0.2s ease-in;
 
-            &:hover{
-                a{
-                    color: $light-color;
-                }
-                background: $dark-color;
-            }
-            
-            i{
-                display: flex;
-                align-self: center;
-                justify-content: center;
-            }
-        }
+			&:hover {
+				a {
+					color: $light-color;
+				}
+				background: $dark-color;
+			}
 
-        &__image{
-            display: flex;
-            align-self: center;
-            justify-content: center;
-            object-fit: fill;
+			i {
+				display: flex;
+				align-self: center;
+				justify-content: center;
+			}
+		}
 
-            img{
-                width: 400px;
-                height: 235px;
-            }
-        }
-    }
+		&__image {
+			display: flex;
+			align-self: center;
+			justify-content: center;
+
+			img {
+				object-fit: cover;
+				width: 400px;
+				height: 235px;
+			}
+		}
+	}
 }
